@@ -14,15 +14,15 @@ fs.readdir(p, function (err, files, data) {
         throw err;
     }
     console.log(files);
-    var array = files;
+    //var array = files;
     //console.log(data);
-    fs.writeFile(a, array, function (err) {
+    fs.writeFile(a, files, function (err) {
         if (err) throw err;
         console.log('Zapisano!'.green);
-        console.log(array);
-        fs.readFile(a, 'utf-8', array, function (err, data) {
+        console.log(files);
+        fs.readFile(a, 'utf-8', function (err, data) {
             console.log('Dane po zapisie'.orange);
-            console.log(array);
+            console.log(data);
         });
     });
 });
