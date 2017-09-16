@@ -21,7 +21,7 @@ fs.readdir(p, function (err, files, data) {
         console.log('Zapisano!'.green);
         console.log(files);
         fs.readFile(a, 'utf-8', function (err, data) {
-            console.log('Dane po zapisie'.orange);
+            console.log('Po zapisaniu:'.red);
             console.log(data);
         });
     });
